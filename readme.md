@@ -1,5 +1,5 @@
 # Paperplate
-> A small custom element to define custom elements from templates
+> a small custom element to define custom elements from template elements
 
 # Example
 
