@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Paperplate Example</title>
+
+    <script src="./paperplate.js" defer></script>
+
+    <template is="template-element" data-element-name="element-example">
+      <style>
+        article {
+          margin-bottom: 1rem;
+        }
+
+        h1 {
+          margin: 0;
+          margin-bottom: -0.7rem;
+        }
+
+        .content {
+          white-space: pre-line;
+        }
+
+        .content::first-letter {
+          color: rebeccapurple;
+          font-size: 150%;
+        }
+      </style>
+      <article>
+        <h1><slot name="title">Default title</slot></h1>
+        <hr />
+        <div class="content">
+          <slot name="main"><slot>Default main</slot></slot>
+        </div>
+      </article>
+    </template>
+  </head>
+
+  <element-example>
+    <span slot="title">Example title</span>
+    <span slot="main">Explicity fill in both slots</span>
+  </element-example>
+
+  <element-example>
+    <span slot="main">Fill in main explicitly and leave title default</span>
+  </element-example>
+
+  <element-example>Fill in main by implicitly</element-example>
+
+  <!-- Completely empty and using defaults values for slots -->
+  <element-example></element-example>
+</html>
