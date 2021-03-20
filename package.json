@@ -1,6 +1,6 @@
 {
   "name": "paperplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "paperplate.js",
   "browser": "paperplate.js",
   "repository": "https://github.com/Brecert/paperplate.git",
