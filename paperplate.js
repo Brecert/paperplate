@@ -1,9 +1,8 @@
 customElements.define(
   "template-element",
   class extends HTMLTemplateElement {
-    constructor() {
-      super();
-      this.defineCustomElement();
+    connectedCallback() {
+      this.defineCustomElement()
     }
 
     defineCustomElement() {
